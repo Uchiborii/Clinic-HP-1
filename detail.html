@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/detail.css" />
+		<link rel="stylesheet" href="css/headerSub.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet" />
+		<script src="js/common.js"></script>
+		<title>お知らせ詳細</title>
+  </head>
+  <body>
+    <div id="header"></div>
+
+		<section>
+			<div class="top-title">
+				<img src="img/hospital.jpeg" alt="病院画像" class="top-photo" />
+				<h1>お知らせ</h1>
+				<p>News</p>
+			</div>
+		</section>
+
+		<section>
+			<div class="container">
+				<ol class="breadcrumb">
+					<li><a href="index.html">ホーム</a></li>
+					<li><a href="news.html">お知らせ</a></li>
+					<li>詳細</li>
+				</ol>
+			</div>
+		</section>
+
+		<section class="text-left">
+			<div>
+				<div id="result"></div>
+			</div>
+		</section>
+		
+      <div id="footer"></div>
+      <script src="js/common.js"></script>
+    </main>
+
+
+<script>
+	getChooseArticle()
+
+	async function getChooseArticle() {
+  const paramsData = await catchEndUrl();
+	console.log("paramsデータ" + paramsData)
+  const value = paramsData.get("id");
+  const url = `${baseUrl}/${value}`;
+  const data = await fetchData(url);
+  displayPost(data);
+}
+
+async function displayPost(data) {
+  const date = new Date(data.dateTime);
+  const formattedDate = customFormat(date);
+
+  let html = "";
+  const content = `<div class="container">
+											<div class="news-title">
+												<h3>${data.title}</h3>
+											</div>
+											<div>
+												<h5>${formattedDate}</h5>
+											</div>
+											<div>
+												<p>${data.content}</p>
+											</div>
+									</div>`;
+  html += content;
+  document.getElementById("result").innerHTML = html;
+}
+	</script>
+
+  </body>
+</html>

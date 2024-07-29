@@ -1,0 +1,287 @@
+@charset "utf-8";
+
+body {
+  color: #474645;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.detail {
+  background-color: #0359b7;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+
+.container-detail {
+  width: 100%;
+  max-width: 100%;
+}
+
+.business-hour,
+.access {
+  flex: 1;
+  margin: 0;
+}
+
+.logo-top{
+	background-color: #0359B7;
+	display:inline-block;
+	height: 300px;
+	position: relative;
+}
+
+.logo-top h1{
+	display: none;
+	position: absolute;
+  top:63%;
+  left: 50%;
+	-ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  color: #fff;
+	font-size: 100%;
+	width: 100%;
+	padding-left: 20%;
+}
+
+
+.top-photo {
+  width: 100%;
+	height: 300px;
+  margin: 0;
+  padding-bottom: 60px;
+	opacity: 0.6;
+	display:block
+}
+
+.box-menu {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1px;
+}
+
+.boxed-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  background-color: #0359b7;
+  position: relative;
+  flex-direction: column;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.img-icon {
+  height: 70px;
+  padding-top: 20px;
+}
+.box-menu :hover {
+  background-color: #023064;
+}
+
+.box-menu a {
+  padding-top: 10px;
+  color: white;
+  text-decoration: none;
+}
+
+.greeting h2{
+	padding-bottom: 10px;
+}
+
+.news h2{
+  text-align: center;
+}
+
+.greeting {
+  text-align: center;
+}
+.doctor-greeting {
+  text-align: center;
+}
+
+.hide-on-mobile {
+  display: none;
+}
+
+.map-image {
+  padding-top: 10px;
+}
+
+p.box-title {
+  color: white;
+	padding: 0 0 20px 0;
+	font-size: 100%;
+}
+
+section.infomation-box{
+	padding: 0;
+	margin: 0;
+}
+
+.news-top {
+	display: none;
+}
+
+.news-date {
+	padding-right: 20px;
+}
+
+.news-flex p{
+	font-size: 100%;
+}
+
+.news-flex {
+	display: flex;
+	display: inline-flex;
+	align-items: center;
+}
+
+.news{
+	padding-top: 30px;
+}
+
+@media screen and (min-width: 1025px) {
+  body {
+    color: #474645;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  .detail {
+    background-color: #0359b7;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .container-detail {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+  }
+
+  .business-hour,
+  .access {
+    flex: 1;
+    padding: 20px;
+    padding: 0;
+  }
+
+  .access {
+    margin: 0 0 70px 80px;
+  }
+
+	.logo-top{
+		width: 100%;
+		height: 1000px !important;
+		margin: 0;
+    padding: 0;
+    background-color: #0359B7;
+		display:inline-block;
+		position: relative;
+}
+
+.logo-top h1{
+	display: none;
+	position: absolute;
+  top:55%;
+  left: 50%;
+	-ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  color: #fff;
+	font-size: 320%;
+	width: 100%;
+	padding-left: 50%;
+}
+
+  .top-photo {
+    width: 100%;
+		height: 1000px !important;
+    margin: 0;
+    padding: 0;
+		opacity: 0.6;
+		display:block
+  }
+
+
+  .box-menu {
+    display: flex;
+    grid-gap: 1px;
+  }
+
+  .boxed-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 400px;
+    padding: 100px;
+    background-color: #0359b7;
+    position: relative;
+    flex-direction: column;
+  }
+
+  .box-menu :hover {
+    background-color: #023064;
+  }
+
+  .box-menu a {
+    padding-top: 10px;
+  }
+
+  .box-menu {
+    color: white;
+    display: flex;
+  }
+
+  .news {
+    text-align: center;
+    padding: 0px;
+  }
+
+  .greeting {
+    padding: 80px 20px;
+    text-align: center;
+  }
+
+  .doctor-greeting {
+    display: flex;
+  }
+
+  .message {
+    padding-left: 140px;
+    text-align: left !important;
+  }
+
+  .message-title {
+    padding-bottom: 30px;
+    margin: 0 0 10px 0;
+  }
+
+  .map-image {
+    padding-top: 10px;
+  }
+
+  .news-top {
+    display: none;
+  }
+
+  .news h2 {
+    padding: 50px;
+  }
+
+	section.infomation-box{
+		padding: 0;
+		margin: 0;
+	}
+	
+}

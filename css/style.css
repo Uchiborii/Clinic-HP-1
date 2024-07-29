@@ -1,0 +1,604 @@
+@charset "utf-8";
+
+* {
+  margin: 0px;
+  color: #474645;
+  font-family: "Noto Sans JP", sans-serif;
+  font-optical-sizing: auto;
+}
+
+footer {
+  background-color: #014187;
+  color: white;
+  padding: 10px;
+}
+
+html {
+  font-size: 20px;
+}
+h1 {
+  font-size: 100%;
+}
+h2 {
+  font-size: 90%;
+}
+h3 {
+  font-size: 75%;
+  font-weight: normal;
+}
+h4 {
+  font-size: 70%;
+  font-weight: bold;
+  border-bottom: 1px dotted #ffffff;
+  padding-top: 30px;
+}
+p {
+  font-size: 65%;
+  padding-top: 5px;
+}
+p.footer-adress {
+  color: white;
+}
+h5 {
+  font-size: 50%;
+  font-weight: normal;
+}
+
+.container {
+  width: 100%;
+  max-width: 280px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-bottom: 10px;
+}
+.btn-circle.btn-lg {
+  width: 30px;
+  height: 30px;
+  padding: 1px 6px;
+  font-size: 60%;
+  border-radius: 25px;
+  background-color: #0359b7;
+  border: none;
+  color: white;
+}
+
+.btn-circle.btn-lg:hover {
+  width: 30px;
+  height: 30px;
+  padding: 1px 6px;
+  font-size: 60%;
+  border-radius: 25px;
+  background-color: #033f80;
+  border: none;
+  color: white;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  font-size: 65%;
+}
+
+a:hover {
+  color: #c5c5c5;
+}
+
+.container-detail p,
+h4 {
+  color: white;
+}
+
+.breadcrumb {
+  display: flex;
+  padding: 10px 0;
+  margin: 0;
+  list-style: none;
+}
+
+.breadcrumb li {
+  display: inline;
+  position: relative;
+  font-size: 50%;
+}
+
+.breadcrumb a {
+  font-size: 100%;
+}
+
+.breadcrumb li:not(:last-of-type)::after {
+  content: "›";
+  margin: 5px;
+  color: #474645;
+}
+
+.breadcrumb li a {
+  color: #474645;
+}
+
+.more-button {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 75px;
+  z-index: 100;
+}
+
+.hospital-logo {
+  height: 65px;
+  padding-left: 10px;
+}
+
+.nav {
+  position: fixed;
+  right: -320px; /* 右から出てくる */
+  top: 0;
+  width: 300px; /* スマホに収まるサイズ */
+  height: 100vh;
+  padding-top: 60px;
+  background-color: #fff;
+  transition: all 0.6s;
+  z-index: 200;
+  overflow-y: auto;
+}
+
+.hamburger {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  width: 40px; /* クリックしやすい幅 */
+  height: 40px; /* クリックしやすい高さ */
+  cursor: pointer;
+  z-index: 300;
+}
+
+.nav-item {
+  text-align: center;
+}
+.nav-item a {
+  display: block;
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+  text-decoration: none;
+  color: #333;
+}
+
+.hamburger-border {
+  position: absolute;
+  left: 8px;
+  width: 24px;
+  height: 2px;
+  background-color: #333;
+  transition: all 0.6s;
+}
+.hamburger-border-top {
+  top: 14px;
+}
+.hamburger-border-center {
+  top: 20px;
+}
+.hamburger-border-bottom {
+  top: 26px;
+}
+.black-bg {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 100;
+  background-color: #333;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.6s;
+  cursor: pointer;
+}
+
+/* 表示された時用のCSS */
+.nav-open .nav {
+  right: 0;
+}
+.nav-open .black-bg {
+  opacity: 0.8;
+  visibility: visible;
+}
+.nav-open .hamburger-border-top {
+  transform: rotate(45deg);
+  top: 20px;
+}
+.nav-open .hamburger-border-center {
+  width: 0;
+  left: 50%;
+}
+.nav-open .hamburger-border-bottom {
+  transform: rotate(-45deg);
+  top: 20px;
+}
+
+.box-position {
+  display: none;
+}
+
+.boxed-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 84px;
+  height: 76px;
+  background-color: #0359b7;
+  position: relative;
+  flex-direction: column;
+}
+
+.overlay-image {
+  margin-bottom: 5px;
+}
+
+.box-position :hover {
+  background-color: #023064;
+}
+
+.boxed-link a {
+  text-decoration: none;
+  color: #ffffff;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 65%;
+}
+
+.grid {
+  display: none;
+}
+
+.grid a {
+  color: white;
+  line-height: 1.8;
+}
+
+hr {
+  margin: 0;
+  border: 0;
+  border-top: 1px solid #e5e7eb;
+}
+
+.footer-adress {
+  text-align: left;
+}
+
+.footer-adress p {
+  color: white;
+}
+
+p.copyright {
+  color: white;
+}
+
+.footer-img {
+  display: block;
+  margin: 0 auto;
+}
+
+.copyright {
+  text-align: center;
+  padding: 20px;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+.img-icon {
+  height: 400px;
+  width: auto;
+}
+
+@media screen and (min-width: 1025px) {
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90px;
+    z-index: 100;
+  }
+
+  footer {
+    background-color: #014187;
+    color: white;
+  }
+
+  h1 {
+    font-size: 175%;
+  }
+  h2 {
+    font-size: 160%;
+  }
+  h3 {
+    font-size: 140%;
+    font-weight: normal;
+  }
+  h4 {
+    font-size: 100%;
+    font-weight: bold;
+    border-bottom: 1px dotted #ffffff;
+    padding-top: 72px;
+  }
+  p {
+    font-size: 100%;
+    padding: 10px;
+  }
+  p.footer-adress {
+    color: white;
+  }
+  h5 {
+    font-size: 80%;
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+    font-size: 100%;
+    font-weight: normal;
+  }
+
+  .breadcrumb {
+    display: flex;
+    padding: 30px 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  .breadcrumb li {
+    display: inline;
+    position: relative;
+    font-size: 75%;
+  }
+
+  .breadcrumb li:not(:last-of-type)::after {
+    content: "›";
+    margin: 13px;
+    color: #474645; /* 記号の色 */
+  }
+
+  .breadcrumb li a {
+    color: #474645;
+  }
+
+  .btn-circle.btn-lg {
+    width: 50px;
+    height: 50px;
+    padding: 10px 16px;
+    font-size: 90%;
+    border-radius: 25px;
+    background-color: #0359b7;
+    border: none;
+    color: white;
+  }
+
+  .btn-circle.btn-lg:hover {
+    width: 50px;
+    height: 50px;
+    padding: 10px 16px;
+    font-size: 90%;
+    border-radius: 25px;
+    background-color: #033f80;
+    border: none;
+    color: white;
+  }
+
+  .container-detail p,
+  h4 {
+    color: white;
+  }
+
+  ul {
+    padding: 0;
+    list-style: none;
+  }
+
+  .blue-line h3 {
+    font-weight: bold;
+  }
+
+  a:hover {
+    color: #c5c5c5;
+  }
+
+  .more-button {
+    display: flex;
+    padding: 50px;
+  }
+
+  .total-more-btn {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .link-container {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .hospital-logo {
+    height: 80px;
+    padding-left: 20px;
+  }
+
+  .nav {
+    position: static;
+    width: auto;
+    height: auto;
+    padding-top: 0;
+    background-color: transparent;
+    transition: none;
+    z-index: auto;
+    overflow: visible;
+    display: flex;
+  }
+
+  .nav-list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .nav-list li {
+    margin: 0 10px;
+    padding-top: 20px;
+  }
+
+  .nav-list a {
+    text-decoration: none;
+    color: #474645;
+  }
+
+  .nav-item {
+    text-align: center;
+    padding: 0;
+  }
+
+  .nav-item a {
+    border-bottom: none;
+    text-decoration: none;
+    color: #333;
+  }
+
+  .nav-item a:hover {
+    color: #c5c1c1;
+  }
+
+  .hamburger {
+    display: none;
+  }
+  .hamburger-border {
+    display: none;
+  }
+
+  .menu {
+    display: flex;
+  }
+
+  .box-position {
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .boxed-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90px;
+    height: 90px;
+    background-color: #0359b7;
+    position: relative;
+    flex-direction: column;
+  }
+
+  .overlay-image {
+    margin-bottom: 5px;
+  }
+
+  .box-position :hover {
+    background-color: #023064;
+  }
+
+  .boxed-link a {
+    text-decoration: none;
+    color: #ffffff;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+  }
+
+  .grid {
+    display: flex;
+    padding: 0px 0px 0px 370px;
+  }
+
+  .grid a {
+    color: white;
+  }
+
+  hr {
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #e5e7eb;
+  }
+
+  .copyright {
+    text-align: center;
+    padding: 10px;
+  }
+
+  .footer-list {
+    display: flex;
+    padding-top: 50px;
+  }
+
+  .footer-adress {
+    text-align: left;
+    padding: 20px 0;
+  }
+
+  .footer-access {
+    padding-left: 50px;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 1000px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-bottom: 30px;
+  }
+
+  img.doctor-img {
+    height: 371px;
+    width: auto;
+  }
+
+  .footer-adress p {
+    color: white;
+  }
+
+  p.copyright {
+    color: white;
+  }
+  img {
+    max-width: 100%;
+  }
+
+  img.img-icon {
+    height: 150px;
+    width: auto;
+  }
+}

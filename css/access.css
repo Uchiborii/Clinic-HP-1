@@ -1,0 +1,106 @@
+.phone-number {
+  width: 140px;
+  padding: 7px 10px;
+  background-color: #0359b7;
+  background-color: rgba(3, 89, 183, 0.2);
+  margin: 10px 0;
+}
+
+.blue-box {
+  width: 100%;
+  margin-top: 30px;
+  background-color: #0359b7;
+  background-color: rgba(3, 89, 183, 0.2);
+  text-align: center;
+}
+
+table.brwsr {
+  width: 270px;
+  border-collapse: separate;
+  padding-bottom: 20px;
+}
+
+table.brwsr th {
+  text-align: left;
+  font-size: 70%;
+  font-weight: bold;
+  padding-top: 10px;
+  border-bottom: dotted 1px #666;
+  width: 50px;
+}
+
+table.brwsr td.data {
+  padding: 0;
+  height: 10px;
+  width: 1px;
+  font-size: 70%;
+  text-align: left;
+  padding-left: 50px;
+  padding-top: 10px;
+  border-bottom: dotted 1px #666;
+}
+
+@media screen and (min-width: 1025px) {
+  .Inquiry-form {
+    display: flex;
+    gap: 20px;
+  }
+
+  .blue-box {
+    width: 100%;
+    height: auto;
+    background-color: #0359b7;
+    background-color: rgba(3, 89, 183, 0.2);
+    text-align: center;
+    margin-left: 5px;
+  }
+
+  .phone-number {
+    width: 240px;
+    padding: 0 10px;
+    background-color: #0359b7;
+    background-color: rgba(3, 89, 183, 0.2);
+  }
+
+  .map-png {
+    width: 100%;
+  }
+
+  table.brwsr {
+    width: 490px;
+    border-collapse: collapse;
+  }
+
+  table.brwsr th {
+    text-align: center;
+    font-size: 100%;
+    font-weight: bold;
+    padding-top: 10px;
+    border-bottom: dotted 1px #666;
+    text-align: left;
+    width: 20%;
+  }
+
+  table.brwsr td.data {
+    padding: 0;
+    height: 53px;
+    width: 300px;
+    font-size: 100%;
+    text-align: left;
+    padding-left: 50px;
+    padding-top: 10px;
+    border-bottom: dotted 1px #666;
+  }
+
+  .car-infomation {
+    display: flex;
+  }
+
+  img.map {
+    margin-left: 10px;
+  }
+
+  .car-detail {
+    padding-top: 40px;
+  }
+}
