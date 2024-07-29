@@ -36,9 +36,15 @@ p {
   font-size: 65%;
   padding-top: 5px;
 }
+
 p.footer-adress {
   color: white;
 }
+
+p.footer-p {
+  padding-bottom: 5px;
+}
+
 h5 {
   font-size: 50%;
   font-weight: normal;
@@ -148,9 +154,9 @@ header {
 
 .nav {
   position: fixed;
-  right: -320px; /* 右から出てくる */
+  right: -320px; 
   top: 0;
-  width: 300px; /* スマホに収まるサイズ */
+  width: 300px;
   height: 100vh;
   padding-top: 60px;
   background-color: #fff;
@@ -163,8 +169,8 @@ header {
   position: absolute;
   right: 15px;
   top: 15px;
-  width: 40px; /* クリックしやすい幅 */
-  height: 40px; /* クリックしやすい高さ */
+  width: 40px;
+  height: 40px;
   cursor: pointer;
   z-index: 300;
 }
@@ -211,7 +217,6 @@ header {
   cursor: pointer;
 }
 
-/* 表示された時用のCSS */
 .nav-open .nav {
   right: 0;
 }
@@ -381,7 +386,7 @@ img {
   .breadcrumb li:not(:last-of-type)::after {
     content: "›";
     margin: 13px;
-    color: #474645; /* 記号の色 */
+    color: #474645;
   }
 
   .breadcrumb li a {

@@ -44,38 +44,8 @@
     </main>
 
 
-<script>
-	getChooseArticle()
-
-	async function getChooseArticle() {
-  const paramsData = await catchEndUrl();
-	console.log("paramsデータ" + paramsData)
-  const value = paramsData.get("id");
-  const url = `${baseUrl}/${value}`;
-  const data = await fetchData(url);
-  displayPost(data);
-}
-
-async function displayPost(data) {
-  const date = new Date(data.dateTime);
-  const formattedDate = customFormat(date);
-
-  let html = "";
-  const content = `<div class="container">
-											<div class="news-title">
-												<h3>${data.title}</h3>
-											</div>
-											<div>
-												<h5>${formattedDate}</h5>
-											</div>
-											<div>
-												<p>${data.content}</p>
-											</div>
-									</div>`;
-  html += content;
-  document.getElementById("result").innerHTML = html;
-}
-	</script>
-
+		<script>
+			getChooseArticle()
+		</script>
   </body>
 </html>
