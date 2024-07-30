@@ -534,14 +534,15 @@ img {
     background-color: #023064;
   }
 
-  .boxed-link a {
+  .boxed-link p {
     text-decoration: none;
     color: #ffffff;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 10px;
+    font-size: 65%;
+		padding: 0;
   }
 
   .grid {
