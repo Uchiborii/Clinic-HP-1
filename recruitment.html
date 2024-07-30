@@ -183,5 +183,24 @@
       <div id="footer"></div>
       <script src="js/common.js"></script>
     </main>
+
+		<script>
+			document.addEventListener("DOMContentLoaded", function() {
+				var offset = 90; // 調整したいオフセット量（例：ヘッダーの高さ）
+			
+				document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+					anchor.addEventListener('click', function(e) {
+						e.preventDefault();
+						var target = document.querySelector(this.getAttribute('href'));
+						var targetPosition = target.getBoundingClientRect().top + window.pageYOffset;
+						window.scrollTo({
+							top: targetPosition - offset,
+							behavior: 'smooth'
+						});
+					});
+				});
+			});
+			</script>
+			
   </body>
 </html>

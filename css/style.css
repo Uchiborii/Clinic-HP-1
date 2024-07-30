@@ -444,10 +444,6 @@ img {
     justify-content: center;
   }
 
-  .link-container {
-    display: inline-flex;
-    align-items: center;
-  }
 
   .hospital-logo {
     height: 80px;
