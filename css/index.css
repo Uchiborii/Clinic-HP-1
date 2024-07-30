@@ -73,8 +73,8 @@ body {
   flex-direction: column;
   color: white;
   text-align: center;
-  padding: 20px;
   box-sizing: border-box;
+	height: 170px;
 }
 
 .img-icon {
@@ -86,7 +86,6 @@ body {
 }
 
 .box-menu a {
-  padding-top: 10px;
   color: white;
   text-decoration: none;
 }
@@ -235,8 +234,9 @@ section.infomation-box{
   }
 
   .box-menu a {
-    padding-top: 10px;
+    padding-top: 90px;
   }
+	
 
   .box-menu {
     color: white;
