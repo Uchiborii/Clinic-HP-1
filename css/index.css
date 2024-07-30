@@ -283,5 +283,10 @@ section.infomation-box{
 		padding: 0;
 		margin: 0;
 	}
+
+	.img-icon {
+		height: 140px;
+		padding-top: 20px;
+	}
 	
 }
