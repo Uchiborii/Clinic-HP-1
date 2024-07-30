@@ -87,6 +87,7 @@
 
 .blue-line {
   background-color: #0359b7;
+	margin-top: 50px;
 }
 
 .blue-line h3 {
@@ -102,6 +103,9 @@
 }
 
 @media screen and (min-width: 1025px) {
+	h2{
+		padding-top: 40px;
+	}
 
   h3 {
     padding: 10px 0;
@@ -205,5 +209,9 @@
 	.Inquiry-form{
 		display: flex;
 		align-items: center;
+	}
+
+	.reservation-flex{
+		display: flex;
 	}
 }

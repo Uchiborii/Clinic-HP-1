@@ -82,19 +82,22 @@ function display(data) {
 
     const content = `
       <div class="list-item">
-        <div class="news-flex">
 					<div class="news-date">
 							<a href="detail.html?id=${blog._id}">
 						<p>${formattedDate}</p>
 						</a>
 					</div>
-					<div>
+					<div class="center-item">
 						<a href="detail.html?id=${blog._id}">
 							<p>${blog.title}</p>
             ${newTag}
 						</a>
           </div>
-        </div>
+					<div class="button-img">
+						<a href="detail.html?id=${blog._id}">
+							<img src="img/button.png" class="button-icon" />
+						</a>
+					</div>
       </div>`;
     html += content;
   });

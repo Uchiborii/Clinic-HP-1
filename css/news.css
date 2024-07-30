@@ -3,15 +3,25 @@ a {
 }
 
 .page-item {
-  padding: 20px 0;
+  padding: 10px;
 }
 
 .list-item {
+  justify-content: space-between;
   display: flex;
   padding: 15px 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  align-items: center;
 }
 
+.list-item p {
+  font-size: 100%;
+}
+
+.button-img .button-icon {
+  max-width: none;
+  height: 15px;
+}
 
 .mt-4 {
   text-align: center;
@@ -24,24 +34,18 @@ a {
 }
 
 .news-date {
-  padding-right: 20px;
+  padding-right: 10px;
 }
 
-.news-flex p {
-  font-size: 100%;
-}
-
-.news-flex {
-  display: flex;
-  display: inline-flex;
-  align-items: center;
+.center-item {
+  margin-right: auto;
 }
 
 @media screen and (min-width: 1025px) {
   .list-item {
     display: flex;
-    padding: 0.75rem 1.25rem;
     border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+    align-items: center;
   }
 
   .mt-4 {
@@ -66,5 +70,10 @@ a {
 
   .news-title {
     padding-bottom: 10px;
+  }
+
+  .button-img .button-icon {
+    max-width: 100%;
+    height: 20px;
   }
 }
