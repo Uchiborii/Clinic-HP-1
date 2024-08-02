@@ -4,6 +4,7 @@
   background-color: #0359b7;
   display: inline-block;
   height: 200px;
+	position: relative;
 }
 
 .top-photo {
@@ -14,10 +15,6 @@
   padding: 0;
   opacity: 0.6;
   display: block;
-}
-
-.top-title {
-  position: relative;
 }
 
 .top-title h1 {
