@@ -44,16 +44,11 @@ table.brwsr2 td.data {
 }
 
 @media screen and (min-width: 1025px) {
-  .doctor-name {
-    text-align: center;
-  }
-
   .hospital-greeting {
     display: flex;
   }
 
   img.doctor-photo {
-    height: auto;
     width: 1600px;
     padding: 60px 20px 0 0;
   }
@@ -61,18 +56,10 @@ table.brwsr2 td.data {
   .message {
     padding-left: 50px;
   }
-  table.brwsr2 {
-    width: 100%;
-    border-collapse: separate;
-  }
 
   table.brwsr2 th {
-    text-align: center;
     font-size: 125%;
-    padding-top: 10px;
-    border-bottom: solid 1px #666;
     width: 20%;
-    font-weight: normal;
   }
 
   table.brwsr2 td.data {
@@ -80,10 +67,8 @@ table.brwsr2 td.data {
     height: 53px;
     width: 600px;
     font-size: 100%;
-    text-align: left;
     padding-left: 50px;
     padding-top: 10px;
-    border-bottom: solid 1px #666;
   }
 
   .hospital-detail {

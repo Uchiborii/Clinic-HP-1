@@ -45,29 +45,12 @@
 
 @media screen and (min-width: 1025px) {
   .more-subbutton {
-    display: flex;
     text-align: right;
-    align-items: center;
-    justify-content: right;
-    padding: 5px 0;
-  }
-
-  .circle-subtitle {
-    position: relative;
-    display: inline-block;
-  }
-
-  .circle-subtitle h3 {
-    display: inline-block;
   }
 
   .circle {
     width: 50px;
     height: 50px;
-    background-color: #0359b7;
-    background-color: rgba(3, 89, 183, 0.2);
-    border-radius: 50%;
-    position: absolute;
     top: 3px;
     left: -20px;
   }

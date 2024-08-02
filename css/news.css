@@ -14,7 +14,6 @@ a {
   align-items: center;
 }
 
-
 .list-item p {
   font-size: 100%;
 }
@@ -43,20 +42,17 @@ a {
 }
 
 @media screen and (min-width: 1025px) {
+  .page-item {
+    padding-top: 40px;
+  }
+
   .list-item {
-    display: flex;
     border-bottom: 1px solid rgba(0, 0, 0, 0.125);
-    align-items: center;
   }
 
-  .mt-4 {
-    text-align: center;
-    padding: 20px 0;
-  }
-
-  .pagination {
-    display: flex;
-    justify-content: center;
+  .button-img .button-icon {
+    max-width: 100%;
+    height: 20px;
   }
 
   .news-date {
@@ -72,13 +68,4 @@ a {
   .news-title {
     padding-bottom: 10px;
   }
-
-  .button-img .button-icon {
-    max-width: 100%;
-    height: 20px;
-  }
-
-	.page-item {
-		padding-top: 40px;
-	}
 }

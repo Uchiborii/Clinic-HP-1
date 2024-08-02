@@ -12,7 +12,7 @@ body {
   color: white;
   display: flex;
   justify-content: space-between;
-	margin-top: 30px;
+  margin-top: 30px;
 }
 
 .container-detail {
@@ -27,19 +27,20 @@ body {
 }
 
 .gmap-iframe {
-	aspect-ratio: 10 / 7;
-	max-width: 100%;
-	width: 100%;
-	height: auto;
-	margin-top: 10px;
+  aspect-ratio: 10 / 7;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  margin-top: 10px;
 }
 
 .logo-top {
-  width: 100%;
+	max-width: 100%;
   position: relative;
   background-color: #0359b7;
   display: inline-block;
-  height: 200px;
+  height: auto;
+	position: relative;
 }
 
 .logo-top h1 {
@@ -57,8 +58,8 @@ body {
 }
 
 .top-photo {
-  width: 100%;
-  height: 200px;
+  max-width: 100%;
+	height: auto;
   object-fit: cover;
   margin: 0;
   padding: 0;
@@ -88,7 +89,7 @@ body {
 }
 
 .img-icon {
-	max-width: 35%;
+  max-width: 35%;
   height: auto;
 }
 .box-menu :hover {
@@ -151,32 +152,17 @@ section.infomation-box {
   padding-top: 30px;
 }
 
-
-
 @media screen and (min-width: 1025px) {
-  body {
-    color: #474645;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-  }
-
   .detail {
-    background-color: #0359b7;
-    color: white;
-    display: flex;
     justify-content: space-between;
   }
 
   .container-detail {
-    width: 100%;
-    max-width: 100%;
     display: flex;
   }
 
   .business-hour,
   .access {
-    flex: 1;
     padding: 20px;
     padding: 0;
   }
@@ -186,53 +172,29 @@ section.infomation-box {
   }
 
   .logo-top {
-    width: 100%;
     height: 1000px !important;
     margin: 0;
     padding: 0;
-    background-color: #0359b7;
-    display: inline-block;
-    position: relative;
   }
 
   .logo-top h1 {
-    display: none;
-    position: absolute;
     top: 55%;
     left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    color: #fff;
     font-size: 320%;
-    width: 100%;
     padding-left: 50%;
   }
 
   .top-photo {
-    max-width: 100%;
     height: 1000px !important;
-    margin: 0;
-    padding: 0;
-    opacity: 0.6;
-    display: block;
   }
 
   .box-menu {
     display: flex;
-    grid-gap: 1px;
   }
 
   .boxed-links {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
     height: 400px;
     padding: 100px;
-    background-color: #0359b7;
-    position: relative;
-    flex-direction: column;
   }
 
   .box-menu :hover {
@@ -248,14 +210,8 @@ section.infomation-box {
     display: flex;
   }
 
-  .news {
-    text-align: center;
-    padding: 0px;
-  }
-
   .greeting {
     padding: 80px 20px;
-    text-align: center;
   }
 
   .doctor-greeting {
@@ -272,27 +228,15 @@ section.infomation-box {
     margin: 0 0 10px 0;
   }
 
-  .map-image {
-    padding-top: 10px;
-  }
-
-  .news-top {
-    display: none;
+  .img-icon {
+    max-width: 100%;
   }
 
   .news h2 {
     padding: 50px;
   }
-
-  section.infomation-box {
-    padding: 0;
-    margin: 0;
+  .news {
+    text-align: center;
+    padding: 0px;
   }
-
-  .img-icon {
-		max-width: 100%;
-		height: auto;
-  }
-
-
 }

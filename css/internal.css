@@ -83,30 +83,9 @@ caption {
 }
 
 @media screen and (min-width: 1025px) {
-  .more-subbutton {
-    display: flex;
-    text-align: right;
-    align-items: center;
-    justify-content: right;
-    padding: 5px 0;
-  }
-
-  .circle-subtitle {
-    position: relative;
-    display: inline-block;
-  }
-
-  .circle-subtitle h3 {
-    display: inline-block;
-  }
-
   .circle {
     width: 50px;
     height: 50px;
-    background-color: #0359b7;
-    background-color: rgba(3, 89, 183, 0.2);
-    border-radius: 50%;
-    position: absolute;
     top: 3px;
     left: -20px;
   }
@@ -117,45 +96,21 @@ caption {
 
   th,
   td {
-    border-top: 1px solid rgb(160, 160, 160); /* 横線のみ表示 */
-    border-bottom: 1px solid rgb(160, 160, 160); /* 横線のみ表示 */
     padding: 20px 10px;
-    background-color: transparent; /* 背景を透過 */
     font-size: 125%;
   }
 
-  th[scope="col"] {
-    border-top: none;
-    background-color: #ffffff;
-    color: #474645;
-  }
-
   th[scope="row"] {
-    background-color: #ffffff;
     width: 25%;
-  }
-
-  td {
-    text-align: center;
-  }
-
-  tr:nth-of-type(even) {
-    background-color: transparent;
   }
 
   table {
     width: 960px;
-    border-collapse: collapse;
-    border: none;
-    font-family: sans-serif;
     font-size: 0.8rem;
     letter-spacing: 1px;
   }
 
   caption {
-    caption-side: bottom;
-    padding: 10px;
-    text-align: right;
     font-size: 125%;
   }
 }

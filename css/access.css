@@ -67,8 +67,6 @@ table.brwsr td.data {
   .phone-number {
     width: 240px;
     padding: 0 10px;
-    background-color: #0359b7;
-    background-color: rgba(3, 89, 183, 0.2);
   }
 
   .map-png {
@@ -83,30 +81,18 @@ table.brwsr td.data {
   table.brwsr th {
     text-align: center;
     font-size: 100%;
-    font-weight: bold;
-    padding-top: 10px;
-    border-bottom: dotted 1px #666;
     text-align: left;
     width: 20%;
   }
 
   table.brwsr td.data {
-    padding: 0;
     height: 53px;
     width: 300px;
     font-size: 100%;
-    text-align: left;
-    padding-left: 50px;
-    padding-top: 10px;
-    border-bottom: dotted 1px #666;
   }
 
   .car-infomation {
     display: flex;
-  }
-
-  img.map {
-    margin-left: 10px;
   }
 
   .car-detail {

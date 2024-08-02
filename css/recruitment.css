@@ -70,10 +70,6 @@ section.recruit-block {
   table.recruit-detail caption {
     background-color: #0359b7;
     padding: 13px 0;
-    text-align: center;
-    font-weight: bold;
-    border: solid 1px 0359B7;
-    color: white;
     font-size: 125%;
   }
 }
