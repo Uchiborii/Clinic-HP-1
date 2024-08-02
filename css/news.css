@@ -21,6 +21,7 @@ a {
 .button-img .button-icon {
   max-width: none;
   height: 15px;
+	padding-left: 10px;
 }
 
 .mt-4 {
