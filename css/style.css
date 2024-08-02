@@ -538,4 +538,8 @@ img {
     height: 150px;
     width: auto;
   }
+
+	.black-bg {
+		display: none;
+	}
 }
