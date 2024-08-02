@@ -172,7 +172,7 @@ section.infomation-box {
   }
 
   .logo-top {
-    height: 1000px !important;
+    height: 1080px !important;
     margin: 0;
     padding: 0;
   }
@@ -185,7 +185,8 @@ section.infomation-box {
   }
 
   .top-photo {
-    height: 1000px !important;
+		max-width: 100%;
+    height: 1080px !important;
   }
 
   .box-menu {
@@ -219,7 +220,7 @@ section.infomation-box {
   }
 
   .message {
-    padding-left: 140px;
+    padding-left: 60px;
     text-align: left !important;
   }
 

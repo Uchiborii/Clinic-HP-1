@@ -354,6 +354,10 @@ img {
     padding-top: 10px;
   }
 
+	.date .p-font{
+		padding-left: 30px;
+	}
+
   .h5-font {
     font-size: 80%;
   }
@@ -529,8 +533,8 @@ img {
   }
 
   img.doctor-img {
-    height: 371px;
-    width: auto;
+    height: auto;
+    max-width: 470px;
     padding-bottom: 50px;
   }
 
@@ -542,7 +546,7 @@ img {
 	.black-bg {
 		display: none;
 	}
-	
+
 	.hide-mobile{
 		display: none;
 	}
