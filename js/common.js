@@ -81,24 +81,18 @@ function display(data) {
     const newTag = isNew ? `<div class="bg-white text-danger rounded-pill m-3 h6">new!</div>` : "";
 
     const content = `
-      <div class="list-item">
+				<a class="list-item" href="detail.html?id=${blog._id}">
 					<div class="news-date">
-							<a href="detail.html?id=${blog._id}">
 						<p>${formattedDate}</p>
-						</a>
 					</div>
 					<div class="center-item">
-						<a href="detail.html?id=${blog._id}">
-							<p>${blog.title}</p>
-            ${newTag}
-						</a>
-          </div>
-					<div class="button-img">
-						<a href="detail.html?id=${blog._id}">
-							<img src="img/button.png" class="button-icon" />
-						</a>
+						<p>${blog.title}</p>
+            ${newTag}				
 					</div>
-      </div>`;
+					<div class="button-img">					
+						<img src="img/button.png" class="button-icon" />						
+					</div>
+				</a>`;
     html += content;
   });
   return html;
