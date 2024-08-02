@@ -54,8 +54,8 @@ async function fetchData(url) {
 
     if (!response.ok) {
       if (response.status === 404) {
-        // window.location.href = "index.html";
-        // return;
+        window.location.href = "index.html";
+        return;
       } else {
         const errorLog = data.message;
         let url = `error.html?message=${errorLog}`;
@@ -172,6 +172,7 @@ async function getChooseArticle() {
 }
 
 async function displayPost(data) {
+	getTitle(data);
   const date = new Date(data.dateTime);
   const formattedDate = customFormat(date);
 
@@ -189,4 +190,11 @@ async function displayPost(data) {
 									</div>`;
   html += content;
   document.getElementById("result").innerHTML = html;
+}
+
+async function getTitle(data){
+	let html = "";
+	const contents = 	`<div class="a-font">${data.title}</div>`;
+html += contents;
+document.getElementById("title").innerHTML = html;
 }

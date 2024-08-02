@@ -31,6 +31,10 @@ html {
 	font-size: 50%;
 }
 
+.a-font{
+	font-size: 100%;
+}
+
 h1 {
   font-size: 100%;
 }
@@ -101,9 +105,10 @@ h4 {
   padding: 10px 0;
   margin: 0;
   list-style: none;
+	flex-wrap:wrap;
 }
 
-.breadcrumb li {
+.bread-title {
   display: inline;
   position: relative;
   font-size: 50%;
@@ -113,13 +118,13 @@ h4 {
   font-size: 100%;
 }
 
-.breadcrumb li:not(:last-of-type)::after {
+.bread-title:not(:last-of-type)::after {
   content: "›";
   margin: 5px;
   color: #474645;
 }
 
-.breadcrumb li a {
+.bread-title a {
   color: #474645;
 }
 
@@ -369,6 +374,10 @@ img {
 		font-size: 80%;
 	}
 
+	.a-font{
+		font-size: 100%;
+	}
+
   h1 {
     font-size: 175%;
   }
@@ -411,43 +420,21 @@ img {
     list-style: none;
   }
 
-  .breadcrumb li {
+  .bread-title {
     display: inline;
     position: relative;
     font-size: 75%;
   }
 
-  .breadcrumb li:not(:last-of-type)::after {
+  .bread-title:not(:last-of-type)::after {
     content: "›";
     margin: 13px;
     color: #474645;
   }
 
-  .breadcrumb li a {
+  .bread-title a {
     color: #474645;
   }
-
-  /* .btn-circle.btn-lg {
-    width: 50px;
-    height: 50px;
-    padding: 10px 16px;
-    font-size: 90%;
-    border-radius: 25px;
-    background-color: #0359b7;
-    border: none;
-    color: white;
-  }
-
-  .btn-circle.btn-lg:hover {
-    width: 50px;
-    height: 50px;
-    padding: 10px 16px;
-    font-size: 90%;
-    border-radius: 25px;
-    background-color: #033f80;
-    border: none;
-    color: white;
-  } */
 
   .container-detail p,
   h4 {
