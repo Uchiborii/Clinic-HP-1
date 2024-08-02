@@ -542,4 +542,8 @@ img {
 	.black-bg {
 		display: none;
 	}
+	
+	.hide-mobile{
+		display: none;
+	}
 }
