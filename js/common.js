@@ -181,7 +181,7 @@ async function displayPost(data) {
 												<h3>${data.title}</h3>
 											</div>
 											<div>
-												<h5>${formattedDate}</h5>
+												<div class="h5-font">${formattedDate}</div>
 											</div>
 											<div>
 												<p>${data.content}</p>

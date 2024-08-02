@@ -16,6 +16,21 @@ footer {
 html {
   font-size: 20px;
 }
+
+.h3-font{
+	font-size: 75%;
+}
+
+.p-font{
+	font-size: 65%;
+  padding-top: 5px;
+}
+
+
+.h5-font{
+	font-size: 50%;
+}
+
 h1 {
   font-size: 100%;
 }
@@ -60,27 +75,6 @@ h5 {
   margin-left: auto;
   padding-bottom: 10px;
 }
-/* .btn-circle.btn-lg {
-  width: 30px;
-  height: 30px;
-  padding: 1px 6px;
-  font-size: 60%;
-  border-radius: 25px;
-  background-color: #0359b7;
-  border: none;
-  color: white;
-}
-
-.btn-circle.btn-lg:hover {
-  width: 30px;
-  height: 30px;
-  padding: 1px 6px;
-  font-size: 60%;
-  border-radius: 25px;
-  background-color: #033f80;
-  border: none;
-  color: white;
-} */
 
 ul {
   padding: 0;
@@ -128,14 +122,6 @@ h4 {
 .breadcrumb li a {
   color: #474645;
 }
-
-/* .more-button {
-  display: flex;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-} */
 
 .btn{
 	text-align: center;
@@ -364,6 +350,24 @@ img {
     background-color: #014187;
     color: white;
   }
+
+	.small-font{
+		font-size: 65%;
+		color: white;
+	}
+
+	.h3-font{
+		font-size: 140%;
+	}
+
+	.p-font{
+		font-size: 100%;
+    padding-top: 10px;
+	}
+
+	.h5-font{
+		font-size: 80%;
+	}
 
   h1 {
     font-size: 175%;
