@@ -26,6 +26,14 @@ body {
   margin: 0;
 }
 
+.gmap-iframe {
+	aspect-ratio: 10 / 7;
+	max-width: 100%;
+	width: 100%;
+	height: auto;
+	margin-top: 10px;
+}
+
 .logo-top {
   width: 100%;
   position: relative;
@@ -285,4 +293,6 @@ section.infomation-box {
 		max-width: 100%;
 		height: auto;
   }
+
+
 }

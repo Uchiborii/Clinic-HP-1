@@ -40,6 +40,15 @@ table.brwsr td.data {
   border-bottom: dotted 1px #666;
 }
 
+.gmap-iframe {
+	aspect-ratio: 10 / 7;
+	max-width: 100%;
+	width: 100%;
+	height: auto;
+	margin-top: 10px;
+}
+
+
 @media screen and (min-width: 1025px) {
   .Inquiry-form {
     display: flex;
