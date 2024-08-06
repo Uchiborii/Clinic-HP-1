@@ -107,6 +107,7 @@ body {
 
 .greeting {
   text-align: center;
+	padding: 30px 0 10px 0;
 }
 .doctor-greeting {
   text-align: center;

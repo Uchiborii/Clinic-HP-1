@@ -90,7 +90,7 @@ function display(data) {
             ${newTag}				
 					</div>
 					<div class="button-img">					
-						<img src="img/button.png" class="button-icon" />						
+						<img src="img/button.webp" class="button-icon" />						
 					</div>
 				</a>`;
     html += content;

@@ -129,12 +129,13 @@ h4 {
 
 .btn {
   text-align: center;
+	padding: 20px;
 }
 
 .arrow {
   width: 30px;
-  height: 30px;
-  padding: 6px 10px;
+  height: auto;
+  padding: 6px 9px;
   margin-left: 6px;
   background-color: #0359b7;
   border-radius: 50%;
@@ -145,7 +146,7 @@ h4 {
 .arrow:hover {
   width: 30px;
   height: 30px;
-  padding: 6px 10px;
+  padding: 6px 9px;
   background-color: #033f80;
   border-radius: 50%;
   color: #fff;
@@ -515,6 +516,15 @@ img {
   hr {
     height: 1px;
   }
+	
+.arrow {
+  padding: 6px 10px;
+}
+
+.arrow:hover {
+  padding: 6px 10px;
+}
+
 
   .copyright {
     text-align: center;
