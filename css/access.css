@@ -15,9 +15,10 @@
 }
 
 table.brwsr {
-  width: 270px;
+  width: 305px;
   border-collapse: separate;
   padding-bottom: 20px;
+	border-spacing: 6px;
 }
 
 table.brwsr th {
@@ -35,6 +36,7 @@ table.brwsr td.data {
   width: 1px;
   font-size: 70%;
   text-align: left;
+  padding-left: 25px;
   padding-top: 10px;
   border-bottom: dotted 1px #666;
 }
@@ -45,6 +47,13 @@ table.brwsr td.data {
 	width: 100%;
 	height: auto;
 	margin-top: 10px;
+}
+
+@media screen and (min-width: 700px) and (max-width: 1024px) {
+	table.brwsr {
+		width: 800px;
+		max-width: 100%;
+	}
 }
 
 
@@ -82,13 +91,12 @@ table.brwsr td.data {
     font-size: 100%;
     text-align: left;
     width: 20%;
-		padding-left: 10px;
   }
 
   table.brwsr td.data {
     height: 53px;
+    width: 300px;
     font-size: 100%;
-		padding: 10px 50px 1px;
   }
 
   .car-infomation {

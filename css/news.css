@@ -42,6 +42,13 @@ a {
   margin-right: auto;
 }
 
+@media screen and (min-width: 700px) and (max-width: 1024px) {
+
+	.list-item p{
+		font-size: 116%;
+	}
+}
+
 @media screen and (min-width: 1025px) {
   .page-item {
     padding-top: 40px;
