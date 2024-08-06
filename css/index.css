@@ -196,16 +196,13 @@ section.infomation-box {
 
   .boxed-links {
     height: 400px;
-    padding: 100px;
   }
 
   .box-menu :hover {
     background-color: #023064;
   }
 
-  .box-menu a {
-    padding-top: 90px;
-  }
+
 
   .box-menu {
     color: white;
