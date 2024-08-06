@@ -4,8 +4,7 @@
 
 img.doctor-photo {
   height: auto;
-  width: 270px;
-  padding: 20px 0 0 0;
+	width: auto;
 }
 
 .message {
@@ -60,15 +59,15 @@ table.brwsr2 td.data {
   table.brwsr2 th {
     font-size: 125%;
     width: 20%;
+		padding: 10px 0;
   }
 
   table.brwsr2 td.data {
-    padding: 0;
+    padding: 10px 0 10px 50px;
     height: 53px;
     width: 600px;
     font-size: 100%;
-    padding-left: 50px;
-    padding-top: 10px;
+		margin-bottom: 100px;
   }
 
   .hospital-detail {

@@ -35,7 +35,6 @@ table.brwsr td.data {
   width: 1px;
   font-size: 70%;
   text-align: left;
-  padding-left: 50px;
   padding-top: 10px;
   border-bottom: dotted 1px #666;
 }
@@ -83,12 +82,13 @@ table.brwsr td.data {
     font-size: 100%;
     text-align: left;
     width: 20%;
+		padding-left: 10px;
   }
 
   table.brwsr td.data {
     height: 53px;
-    width: 300px;
     font-size: 100%;
+		padding: 10px 50px 1px;
   }
 
   .car-infomation {
