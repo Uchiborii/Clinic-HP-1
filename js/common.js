@@ -7,6 +7,7 @@ fetch("footer.html")
   .then((data) => (document.querySelector("#footer").innerHTML = data));
 
 const baseUrl = `https://u-company.cdn.newt.so/v1/blog-547919/post`;
+const recruitUrl = `https://u-company.cdn.newt.so/v1/blog-547919/recruit`;
 const order = "&order=-dateTime";
 
 async function displayData() {
@@ -16,19 +17,19 @@ async function displayData() {
   const max_page = data.total && data.limit ? Math.ceil(Number(data.total) / Number(data.limit)) : 1;
 
   const content = `<div class="news-top">
-												<nav aria-label="Page navigation example">
-														<ul class="pagination">
-																<li class="page-item">
-																		${page > 1 ? `<li class="page-item"><a class="page-link" href="news.html?page=${page - 1}" aria-label="Previous"><span aria-hidden="true">&laquo; 前へ</span></a></li>` : ""}
-																		</a>
-																</li>
+	<nav aria-label="Page navigation example">
+	<ul class="pagination">
+	<li class="page-item">
+	${page > 1 ? `<li class="page-item"><a class="page-link" href="news.html?page=${page - 1}" aria-label="Previous"><span aria-hidden="true">&laquo; 前へ</span></a></li>` : ""}
+	</a>
+	</li>
 	
-																<li class="page-item">
-																		${page < max_page ? `<li class="page-item"><a class="page-link" href="news.html?page=${page + 1}" aria-label="Next"><span aria-hidden="true">次へ &raquo;</span></a></li>` : ""}
-																		</a>
-																</li>
-														</ul>
-												</nav>`;
+	<li class="page-item">
+	${page < max_page ? `<li class="page-item"><a class="page-link" href="news.html?page=${page + 1}" aria-label="Next"><span aria-hidden="true">次へ &raquo;</span></a></li>` : ""}
+	</a>
+	</li>
+	</ul>
+	</nav>`;
   document.getElementById("result").innerHTML += content;
 }
 
@@ -81,18 +82,18 @@ function display(data) {
     const newTag = isNew ? `<div class="bg-white text-danger rounded-pill m-3 h6">new!</div>` : "";
 
     const content = `
-				<a class="list-item" href="detail.html?id=${blog._id}">
-					<div class="news-date">
-						<p>${formattedDate}</p>
-					</div>
-					<div class="center-item">
-						<p>${blog.title}</p>
-            ${newTag}				
-					</div>
-					<div class="button-img">					
-						<img src="img/button.webp" class="button-icon" />						
-					</div>
-				</a>`;
+		<a class="list-item" href="detail.html?id=${blog._id}">
+		<div class="news-date">
+		<p>${formattedDate}</p>
+		</div>
+		<div class="center-item">
+		<p>${blog.title}</p>
+		${newTag}				
+		</div>
+		<div class="button-img">					
+		<img src="img/button.webp" class="button-icon" />						
+		</div>
+		</a>`;
     html += content;
   });
   return html;
@@ -147,18 +148,12 @@ function toggleNav() {
   var body = document.body;
   body.classList.toggle("nav-open");
 }
-
 var hamburger = document.getElementById("js-hamburger");
 var blackBg = document.getElementById("js-black-bg");
 
-hamburger.addEventListener("click", toggleNav);
-blackBg.addEventListener("click", function () {
-  document.body.classList.remove("nav-open");
-});
-
 async function getChooseArticle() {
   const paramsData = await catchEndUrl();
-	console.log("paramsデータ" + paramsData)
+  console.log("paramsデータ" + paramsData);
   const value = paramsData.get("id");
   const url = `${baseUrl}/${value}`;
   const data = await fetchData(url);
@@ -166,29 +161,111 @@ async function getChooseArticle() {
 }
 
 async function displayPost(data) {
-	getTitle(data);
+  getTitle(data);
   const date = new Date(data.dateTime);
   const formattedDate = customFormat(date);
 
   let html = "";
   const content = `<div class="container">
-											<div class="news-title">
-												<h3>${data.title}</h3>
-											</div>
-											<div>
-												<div class="h5-font">${formattedDate}</div>
-											</div>
-											<div>
-												<p>${data.content}</p>
-											</div>
-									</div>`;
+	<div class="news-title">
+	<h3>${data.title}</h3>
+	</div>
+	<div>
+	<div class="h5-font">${formattedDate}</div>
+	</div>
+	<div>
+	<p>${data.content}</p>
+	</div>
+	</div>`;
   html += content;
   document.getElementById("result").innerHTML = html;
 }
 
-async function getTitle(data){
-	let html = "";
-	const contents = 	`<div class="a-font">${data.title}</div>`;
-html += contents;
-document.getElementById("title").innerHTML = html;
+async function getTitle(data) {
+  let html = "";
+  const contents = `<div class="a-font">${data.title}</div>`;
+  html += contents;
+  document.getElementById("title").innerHTML = html;
+}
+
+//採用情報
+
+async function getRecruitData() {
+  const recruitData = await fetchRecruit(recruitUrl);
+  const recruitHtml = await displayRecruit(recruitData);
+  return { recruitHtml, recruitData };
+}
+
+async function fetchRecruit(recruitUrl) {
+  try {
+    const response = await fetch(recruitUrl, {
+      headers: {
+        Authorization: "Bearer JhOWeg9Xp1lXjsUp-asOWwnKLjrhYgSZdeJf5gvOZko",
+      },
+    });
+    const jsonData = await response.json();
+    return jsonData;
+  } catch (error) {
+    console.error("エラー:", error);
+    console.log("エラー");
+  }
+}
+
+function displayRecruit(recruitData) {
+  let html = "";
+  recruitData.items.forEach((recruit) => {
+    const content = `
+		<section class="recruit-block">
+			<div class="container">
+				<table class="recruit-detail">
+					<caption id="number2">${recruit.Title}</caption>
+					<tbody>
+						<tr>
+							<th>職種</th>
+							<td>${recruit.Occupation}</td>
+						</tr>
+							<tr>
+							<th>募集人員</th>
+						<td>${recruit.Number}</td>
+						</tr>
+						<tr>
+							<th>応募資格</th>
+							<td><pre>${recruit.Qualification}</pre></td>
+						</tr>
+						<tr>
+							<th>勤務場所</th>
+							<td><pre>${recruit.WorkPlace}</pre></td>
+						</tr>
+						<tr>
+							<th>処遇</th>
+							<td><pre>${recruit.Treatment}</pre></td>
+						</tr>
+						<tr>
+							<th>採用日</th>
+							<td>${recruit.Date}</td>
+						</tr>
+						<tr>
+							<th>選考日</th>
+							<td>${recruit.Selection}</td>
+						</tr>
+						<tr>
+							<th>選考場所</th>
+							<td><pre>${recruit.SelectionPlace}</pre></td>
+						</tr>
+						<tr>
+							<th>問い合わせ先</th>
+							<td>${recruit.Inquiry}</pre></td>
+						</tr>
+						<tr>
+							<th>締め切り</th>
+							<td>${recruit.Deadline}</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</section>`;
+    html += content;
+    document.getElementById("recruitResult").innerHTML = html;
+  });
+  return html;
 }
