@@ -64,6 +64,17 @@ h2{
   margin: 10px 0;
 }
 
+.phone-number a {
+	color: #474645;
+	text-decoration: none;
+	font-size: 65%;
+}
+
+a:hover {
+	color: #c5c5c5;
+}
+
+
 .box-skyblue {
   max-width: 100%;
   padding: 4px 10px;
@@ -153,16 +164,6 @@ h2{
     width: 240px;
     padding: 8px 10px;
   }
-
-	a {
-		color: #474645;
-		text-decoration: none;
-		font-size: 65%;
-	}
-	
-	a:hover {
-		color: #c5c5c5;
-	}
 
   .box-skyblue {
     width: 100%;
