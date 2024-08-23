@@ -64,6 +64,15 @@ h2{
   margin: 10px 0;
 }
 
+.phone-number, #number {
+	color: #474645;
+}
+
+#number {
+color: black !important;
+}
+
+
 .box-skyblue {
   max-width: 100%;
   padding: 4px 10px;
