@@ -35,12 +35,12 @@ body {
 }
 
 .logo-top {
-	max-width: 100%;
+  width: 100%;
   position: relative;
   background-color: #0359b7;
   display: inline-block;
   height: auto;
-	position: relative;
+  position: relative;
 }
 
 .logo-top h1 {
@@ -58,8 +58,8 @@ body {
 }
 
 .top-photo {
-  max-width: 100%;
-	height: auto;
+  width: 100%;
+  height: auto;
   object-fit: cover;
   margin: 0;
   padding: 0;
@@ -107,7 +107,7 @@ body {
 
 .greeting {
   text-align: center;
-	padding: 30px 0 10px 0;
+  padding: 30px 0 10px 0;
 }
 .doctor-greeting {
   text-align: center;
@@ -173,7 +173,8 @@ section.infomation-box {
   }
 
   .logo-top {
-    height: 1080px !important;
+    width: 100%;
+    height: auto;
     margin: 0;
     padding: 0;
   }
@@ -186,8 +187,10 @@ section.infomation-box {
   }
 
   .top-photo {
-		max-width: 100%;
-    height: 1080px !important;
+    /* max-width: 100%;
+    height: 1080px !important; */
+    width: 100%;
+    height: auto;
   }
 
   .box-menu {
@@ -201,8 +204,6 @@ section.infomation-box {
   .box-menu :hover {
     background-color: #023064;
   }
-
-
 
   .box-menu {
     color: white;
