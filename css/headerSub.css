@@ -67,8 +67,13 @@ h2{
 .phone-number a {
 	color: #474645;
 	text-decoration: none;
+	font-size: 75% !important;
+}
+
+.phone-number a span.h3-font {
 	font-size: 75%;
 }
+
 
 a:hover {
 	color: #706f6c;
