@@ -64,12 +64,8 @@ h2{
   margin: 10px 0;
 }
 
-.phone-number, #number {
-	color: #474645;
-}
-
 #number {
-color: black !important;
+color: #474645 !important;
 }
 
 
