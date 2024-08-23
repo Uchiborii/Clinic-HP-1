@@ -17,7 +17,6 @@
 table.brwsr {
   width: 305px;
   border-collapse: separate;
-  padding-bottom: 20px;
 	border-spacing: 6px;
 }
 
@@ -25,20 +24,15 @@ table.brwsr th {
   text-align: left;
   font-size: 70%;
   font-weight: bold;
-  padding-top: 10px;
+	padding: 10px 0;
   border-bottom: dotted 1px #666;
-  width: 50px;
 }
 
 table.brwsr td.data {
-  padding: 0;
-  height: 10px;
-  width: 1px;
-  font-size: 70%;
   text-align: left;
-  padding-left: 25px;
-  padding-top: 10px;
+	padding: 10px 0 10px 25px;
   border-bottom: dotted 1px #666;
+	font-size: 75%;
 }
 
 .gmap-iframe {
@@ -83,7 +77,8 @@ table.brwsr td.data {
 
   table.brwsr {
     width: 490px;
-    border-collapse: collapse;
+		border-collapse: separate;
+		border-spacing: 6px;
   }
 
   table.brwsr th {

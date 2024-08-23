@@ -70,12 +70,7 @@ h2{
 	font-size: 75% !important;
 }
 
-.phone-number a span.h3-font {
-	font-size: 75%;
-}
-
-
-a:hover {
+.phone-number a:hover {
 	color: #706f6c;
 }
 
