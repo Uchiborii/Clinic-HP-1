@@ -265,6 +265,9 @@ async function displayRecruit(recruitData) {
 								</tr>
 							</tbody>
 						</table>
+						<div class="btn">
+						<a href="form.html"> <span class="regular-font">ご応募はこちらから</span> <span class="arrow">→</span> </a>
+					</div>
 					</div>
 				</section>
 			`;

@@ -11,7 +11,7 @@
     </head>
     <body>
 			<div id="header"></div>
-
+			<div class="header-top"></div>
 			<section>
 				<div class="top-title">
 					<img src="img/hospital.webp" alt="病院画像" class="top-photo" />
@@ -33,7 +33,7 @@
 			<section>
 				<div class="container">
         <div class="p-12 u-center">
-            <form action="https://u-company.form.newt.so/v1/F8e5TB-48" method="post">
+            <form action="https://u-company.form.newt.so/v1/F8e5TB-48" enctype="multipart/form-data" method="post">
 							<dl class="form-top">
 									<div class="form-flex">
 										<dt class="form-title"><div class="recruit-font">氏名<span style="color: red;">*</span></div></dt>
@@ -62,7 +62,7 @@
 									<div class="form-flex">
 										<dt class="form-title"><div class="recruit-font">生年月日 <span style="color: red;">*</span></div></dt>
 											<dd class="form-padding">
-													<input type="text" class="text-box" name="birth"  required placeholder="例）19990101 ※1999年1月1日生まれの場合" />
+													<input type="text" class="text-box" name="birth"  maxlength="8" required placeholder="例）19990101 ※1999年1月1日生まれの場合" />
 											</dd>
 									</div>
 
@@ -76,7 +76,7 @@
 									<div class="form-flex">
 										<dt class="form-title"><div class="recruit-font">電話番号 <span style="color: red;">*</span></div></dt>
 											<dd class="form-padding">
-												<input type="number" class="text-box" name="phone"  required  placeholder="例）000-0000-0000" />
+												<input type="text" class="text-box" name="phone"  required  placeholder="例）000-0000-0000" />
 											</dd>
 									</div>
 
@@ -104,21 +104,21 @@
 									<div class="form-flex">
 										<dt class="form-title"><div class="recruit-font">履歴書</div></dt>
 											<dd class="form-padding">
-												<input type="file" name="example" accept="image/jpeg, image/png">
+												<input type="file" name="attachments[]" multiple>
 											</dd>
 										</div>
 										
 										<div class="form-flex">
 											<dt class="form-title"><div class="recruit-font">職務経歴書</div></dt>
 											<dd class="form-padding">
-												<input type="file" name="example" accept="image/jpeg, image/png">
+												<input type="file" name="attachments[]" multiple>
 											</dd>
 										</div>
 										
 										<div class="form-flex">
 											<dt class="form-title"><div class="recruit-font">免許（医療職の方）</div></dt>
 											<dd class="form-padding">
-												<input type="file" name="example" accept="image/jpeg, image/png">
+												<input type="file" name="attachments[]" multiple>
 											</dd>
 										</div>
 										

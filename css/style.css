@@ -172,6 +172,10 @@ header {
   z-index: 100;
 }
 
+.header-top {
+	padding-top: 80px;
+}
+
 .hospital-logo {
   height: 65px;
   padding-left: 10px;
@@ -398,6 +402,10 @@ img {
   header {
     height: 90px;
   }
+
+	.header-top {
+		padding-top: 90px;
+	}
 
   .small-font {
     font-size: 65%;

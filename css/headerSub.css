@@ -4,7 +4,7 @@ h2 {
 
 .top-title {
   width: 100%;
-  height: 200px;
+  height: 120px;
   position: relative;
   background-color: #0359b7;
   display: inline-block;
@@ -13,7 +13,7 @@ h2 {
 
 .top-photo {
   width: 100%;
-  height: 200px;
+  height: 120px;
   object-fit: cover;
   margin: 0;
   padding: 0;
@@ -24,7 +24,7 @@ h2 {
 .top-title h1 {
   position: absolute;
   color: white;
-  top: 67%;
+  top: 55%;
   left: 50%;
   -ms-transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
@@ -37,7 +37,7 @@ h2 {
 .top-title p {
   position: absolute;
   color: white;
-  top: 75%;
+  top: 69%;
   left: 50%;
   -ms-transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
@@ -156,13 +156,8 @@ h2 {
     height: 300px;
   }
 
-  .top-title h1 {
-    top: 60%;
-  }
-
   .top-title p {
-    top: 70%;
-    left: 50%;
+    top: 66%;
   }
 
   .phone-number {
