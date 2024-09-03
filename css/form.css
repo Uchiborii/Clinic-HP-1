@@ -1,0 +1,154 @@
+.recruit-font {
+	font-size: 80%;
+}
+
+form dl dt{
+	width: 100%;
+}
+
+.form-title{
+	padding: 10px 10px 0 10px;
+}
+
+.form-flex{
+	display: block;
+	border-bottom: solid 1px rgb(201, 193, 193);
+	height: auto;
+	max-width: 100%;
+}
+
+.form-padding {
+	padding: 3px 9px 20px ;
+}
+
+.form-padding-name {
+	padding: 3px 9px 0px ;
+}
+
+input.radio{
+	margin-right: 10px;
+}
+
+.form-radio {
+	display: flex;
+}
+
+button.form-btn {
+	padding: 8px 15px;
+}
+
+.text-box {
+	width: 90%;
+	padding: 10px;
+	height: auto;
+	max-width: 100%;
+}
+
+.name-box{
+	width: 90%;
+	padding: 10px;
+	height: auto;
+	max-width: 100%;
+}
+
+.radio-btn {
+	padding: 10px 20px;
+}
+
+#alert-message{
+	padding-top: 20px;
+}
+
+.form-submit {
+	padding: 20px;
+	width: fit-content;
+	margin: auto;
+}
+
+button.form-btn {
+	padding: 8px 10px;
+	font-size: 80%;
+	color: #fff;
+	background-color: #0359b7;
+	border: 1px solid #0359b7;
+	border-radius: 5px;
+	text-decoration: none;
+	cursor: pointer;
+	transition: background-color 1s;
+	
+}
+
+.form-btn:hover{
+    background-color: #023064;
+    border: 1px solid #023064;
+    border-radius: 5px;
+    transition: background-color 1s;
+}
+
+
+@media screen and (min-width: 700px) and (max-width: 1024px) {
+	
+}
+
+@media screen and (min-width: 1025px) {
+
+.recruit-font {
+	font-size: 90%;
+}
+
+form dl dt{
+	width: 300px;
+	height: auto;;
+	max-width: 100%;
+}
+
+.form-top{
+	width: fit-content;
+  margin: auto;
+}
+
+.form-title{
+	padding: 30px;
+}
+
+.form-flex{
+	display: flex;
+}
+
+.full-name {
+	display: flex;
+}
+
+.form-padding {
+  padding: 30px 9px;
+}
+
+.form-padding-name {
+	padding: 30px 9px;
+}
+
+button.form-btn {
+	padding: 10px 20px;
+	font-size: 100%;
+}
+
+.text-box {
+	width: 500px;
+	padding: 10px;
+	height: auto;
+	max-width: 100%;
+}
+
+.name-box{
+	width: 228px;
+	padding: 10px;
+	height: auto;
+	max-width: 100%;
+}
+
+
+.radio-btn {
+padding: 30px 20px;
+}
+
+}

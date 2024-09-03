@@ -45,6 +45,12 @@ section.recruit-block {
   padding-top: 50px;
 }
 
+.recruit-bar{
+	border-left: 3px solid #0359b7;
+	padding-left: 10px;
+	margin-top: 30px;
+}
+
 @media screen and (min-width: 1025px) {
   p.recruit {
     padding-left: 60px;

@@ -1,4 +1,3 @@
-
 const baseUrl = `https://u-company.cdn.newt.so/v1/blog-547919/post`;
 const recruitUrl = `https://u-company.cdn.newt.so/v1/blog-547919/recruit`;
 const order = "&order=-dateTime";
@@ -13,12 +12,12 @@ async function displayData() {
 	<nav aria-label="Page navigation example">
 	<ul class="pagination">
 	<li class="page-item">
-	${page > 1 ? `<li class="page-item"><a class="page-link" href="news.html?page=${page - 1}" aria-label="Previous"><span aria-hidden="true">&laquo; 前へ</span></a></li>` : ""}
+	${page > 1 ? `<li class="page-item"><a class="page-link" href="news.html?page=${page - 1}" aria-label="Previous"><span aria-hidden="true">&laquo; 前へ　</span></a></li>` : ""}
 	</a>
 	</li>
 	
 	<li class="page-item">
-	${page < max_page ? `<li class="page-item"><a class="page-link" href="news.html?page=${page + 1}" aria-label="Next"><span aria-hidden="true">次へ &raquo;</span></a></li>` : ""}
+	${page < max_page ? `<li class="page-item"><a class="page-link" href="news.html?page=${page + 1}" aria-label="Next"><span aria-hidden="true">　次へ &raquo;</span></a></li>` : ""}
 	</a>
 	</li>
 	</ul>
@@ -76,16 +75,16 @@ function display(data) {
 
     const content = `
 		<a class="list-item" href="detail.html?id=${blog._id}">
-		<div class="news-date">
-		<p>${formattedDate}</p>
-		</div>
-		<div class="center-item">
-		<p>${blog.title}</p>
-		${newTag}				
-		</div>
-		<div class="button-img">					
-		<img src="img/button.webp" class="button-icon" />						
-		</div>
+			<div class="news-date">
+				<p>${formattedDate}</p>
+			</div>
+			<div class="center-item">
+				<p>${blog.title}</p>
+				${newTag}			
+			</div>
+			<div class="button-img">					
+				<img src="img/button.webp" class="button-icon" />						
+			</div>
 		</a>`;
     html += content;
   });
@@ -131,92 +130,161 @@ async function catchEndUrl() {
 
 let page;
 
-catchEndUrl().then((params) => {
-  page = params.get("page") ? Number(params.get("page")) : 1;
+async function startCatchUrl() {
+  catchEndUrl().then((params) => {
+    page = params.get("page") ? Number(params.get("page")) : 1;
+    displayData();
+  });
+}
 
-  displayData();
-});
+//お知らせ詳細
 
+async function getChooseArticle() {
+  const paramsData = await catchEndUrl();
+  const value = paramsData.get("id");
+  const url = `${baseUrl}/${value}`;
+  const data = await fetchData(url);
+  displayPost(data);
+}
 
+async function displayPost(data) {
+  getTitle(data);
+  const date = new Date(data.dateTime);
+  const formattedDate = customFormat(date);
+
+  let recruitContents = "";
+  if (data.category == "Recruitment") {
+    recruitContents = `<a href="recruitment.html?id=${data._id}">採用情報詳細はこちら <i class="bi bi-box-arrow-up-right"></i></a>`;
+  }
+
+  let html = "";
+  const content = `
+	<div class="container">
+		<div class="news-title">
+			<h3>${data.title}</h3>
+		</div>
+		<div>
+			<div class="h5-font">${formattedDate}</div>
+		</div>
+		<div>
+			<p>${data.content}</p>
+			${recruitContents}
+			</div>
+	</div>`;
+  html += content;
+  document.getElementById("result").innerHTML = html;
+}
+
+async function getTitle(data) {
+  let html = "";
+  const contents = `<div class="a-font">${data.title}</div>`;
+  html += contents;
+  document.getElementById("title").innerHTML = html;
+}
 
 //採用情報
 
 async function getRecruitData() {
-  const recruitData = await fetchRecruit(recruitUrl);
-  const recruitHtml = await displayRecruit(recruitData);
-  return { recruitHtml, recruitData };
+  let url = `${baseUrl}?${order}`;
+  const recruitData = await fetchData(url);
+  displayRecruit(recruitData);
+  RecruitTitle(recruitData);
 }
 
-async function fetchRecruit(recruitUrl) {
-  try {
-    const response = await fetch(recruitUrl, {
-      headers: {
-        Authorization: "Bearer JhOWeg9Xp1lXjsUp-asOWwnKLjrhYgSZdeJf5gvOZko",
-      },
-    });
-    const jsonData = await response.json();
-    return jsonData;
-  } catch (error) {
-    console.error("エラー:", error);
-    console.log("エラー");
-  }
-}
-
-function displayRecruit(recruitData) {
+async function RecruitTitle(recruitData) {
   let html = "";
-  recruitData.items.forEach((recruit) => {
-    const content = `
-		<section class="recruit-block">
-			<div class="container">
-				<table class="recruit-detail">
-					<caption id="number2">${recruit.Title}</caption>
-					<tbody>
-						<tr>
-							<th>職種</th>
-							<td>${recruit.Occupation}</td>
-						</tr>
-							<tr>
-							<th>募集人員</th>
-						<td>${recruit.Number}</td>
-						</tr>
-						<tr>
-							<th>応募資格</th>
-							<td><pre>${recruit.Qualification}</pre></td>
-						</tr>
-						<tr>
-							<th>勤務場所</th>
-							<td><pre>${recruit.WorkPlace}</pre></td>
-						</tr>
-						<tr>
-							<th>処遇</th>
-							<td><pre>${recruit.Treatment}</pre></td>
-						</tr>
-						<tr>
-							<th>採用日</th>
-							<td>${recruit.Date}</td>
-						</tr>
-						<tr>
-							<th>選考日</th>
-							<td>${recruit.Selection}</td>
-						</tr>
-						<tr>
-							<th>選考場所</th>
-							<td><pre>${recruit.SelectionPlace}</pre></td>
-						</tr>
-						<tr>
-							<th>問い合わせ先</th>
-							<td>${recruit.Inquiry}</pre></td>
-						</tr>
-						<tr>
-							<th>締め切り</th>
-							<td>${recruit.Deadline}</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-		</section>`;
-    html += content;
-    document.getElementById("recruitResult").innerHTML = html;
+
+  recruitData.items.forEach((post) => {
+    if (post.Recruitment.Title) {
+
+      const content = `
+				<section class="recruit-title">
+					<div class="recruit-bar">
+						<a href="recruitment.html?id=${post._id}">${post.Recruitment.Title}</a>
+					</div>
+				</section>
+						`;
+      html += content;
+    }
   });
-  return html;
+  document.getElementById("recruitTitleResult").innerHTML = html;
+}
+
+async function displayRecruit(recruitData) {
+  let html = "";
+
+  recruitData.items.forEach((post) => {
+    if (post.Recruitment.Title) {
+      const content = `
+				<section class="recruit-block">
+					<div class="container">
+						<table class="recruit-detail">
+							<div id="id${post._id}">
+								<caption id="number2">${post.Recruitment.Title}</caption>
+								</div>
+								<tbody>
+								<tr>
+									<th>職種</th>
+									<td>${post.Recruitment.Occupation}</td>
+								</tr>
+								<tr>
+									<th>募集人員</th>
+								<td>${post.Recruitment.Number}</td>
+								</tr>
+								<tr>
+									<th>応募資格</th>
+									<td><pre>${post.Recruitment.Qualification}</pre></td>
+								</tr>
+								<tr>
+									<th>勤務場所</th>
+									<td><pre>${post.Recruitment.WorkPlace}</pre></td>
+								</tr>
+								<tr>
+									<th>処遇</th>
+									<td><pre>${post.Recruitment.Treatment}</pre></td>
+								</tr>
+								<tr>
+									<th>採用日</th>
+									<td>${post.Recruitment.RecruitDate}</pre></td>
+								</tr>
+								<tr>
+									<th>選考日</th>
+									<td>${post.Recruitment.Selection}</td>
+								</tr>
+								<tr>
+									<th>選考場所</th>
+									<td><pre>${post.Recruitment.SelectionPlace}</pre></td>
+								</tr>
+								<tr>
+									<th>問い合わせ先</th>
+									<td><pre>${post.Recruitment.Inquiry}</pre></td>
+								</tr>
+								<tr>
+									<th>締め切り</th>
+									<td>${post.Recruitment.Deadline}</pre></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</section>
+			`;
+      html += content;
+    }
+  });
+  document.getElementById("recruitResult").innerHTML = html;
+  catchId();
+}
+
+async function catchId() {
+  const paramsData = await catchEndUrl();
+  const hash = paramsData.get("id");
+  scroll(hash);
+}
+
+async function scroll(hash) {
+  let targetElement = document.getElementById("id" + hash);
+  if (targetElement) {
+    let locationOffset = targetElement.getBoundingClientRect().top - 100;
+    scrollTo(0, locationOffset);
+  } 
 }

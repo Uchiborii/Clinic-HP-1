@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+				<link rel="stylesheet" href="css/style.css" />
+				<link rel="stylesheet" href="css/headerSub.css" />
+				<link rel="stylesheet" href="css/form.css" />
+				<script src="js/html.js"></script>
+				<title>Form App問い合わせフォーム</title>
+    </head>
+    <body>
+			<div id="header"></div>
+
+			<section>
+				<div class="top-title">
+					<img src="img/hospital.webp" alt="病院画像" class="top-photo" />
+					<h1>エントリーフォーム</h1>
+					<p>entry</p>
+				</div>
+			</section>
+			
+			<section>
+				<div class="container">
+					<div class="breadcrumb">
+						<div class="bread-title"><a href="index.html">ホーム</a></div>
+						<div class="bread-title"><a href="recruitment.html">採用情報</a></div>
+						<div class="bread-title">エントリーフォーム</div>
+					</ol>
+				</div>
+			</section>
+
+			<section>
+				<div class="container">
+        <div class="p-12 u-center">
+            <form action="https://u-company.form.newt.so/v1/F8e5TB-48" method="post">
+							<dl class="form-top">
+									<div class="form-flex">
+										<dt class="form-title"><div class="recruit-font">氏名<span style="color: red;">*</span></div></dt>
+										<div class="full-name">
+											<dd class="form-padding-name">
+													<input type="text" class="name-box" name="sei" placeholder="姓"  required/>
+											</dd>
+											<dd class="form-padding">
+												<input type="text" class="name-box" name="mei" placeholder="名"  required/>
+											</dd>										
+										</div>
+									</div>
+			
+									<div class="form-flex">
+										<dt class="form-title"><div class="recruit-font">性別</div></dt>
+											<dd class="form-radio">
+												<div class="radio-btn">
+													<label for="radio" class="recruit-font"><input type="radio" id="radio" name="gender" class="radio">男性</label>
+												</div>
+												<div class="radio-btn">
+													<label for="radio-woman" class="recruit-font"><input type="radio" id="radio-woman" name="gender" class="radio">女性</label>
+												</div>
+											</dd>
+									</div>
+
+									<div class="form-flex">
+										<dt class="form-title"><div class="recruit-font">生年月日 <span style="color: red;">*</span></div></dt>
+											<dd class="form-padding">
+													<input type="text" class="text-box" name="birth"  required placeholder="例）19990101 ※1999年1月1日生まれの場合" />
+											</dd>
+									</div>
+
+									<div class="form-flex">
+										<dt class="form-title"><div class="recruit-font">メールアドレス <span style="color: red;">*</span></div></dt>
+											<dd class="form-padding">
+												<input type="email" class="text-box" name="email"  required  placeholder="例）example@gmail.com" />
+											</dd>
+									</div>
+
+									<div class="form-flex">
+										<dt class="form-title"><div class="recruit-font">電話番号 <span style="color: red;">*</span></div></dt>
+											<dd class="form-padding">
+												<input type="number" class="text-box" name="phone"  required  placeholder="例）000-0000-0000" />
+											</dd>
+									</div>
+
+									<div class="form-flex">
+										<dt class="form-title"><div class="recruit-font">応募職種 <span style="color: red;">*</span></div></dt>
+											<dd class="form-padding">
+												<input type="text" class="text-box" name="email"  required  placeholder="例）内視鏡技師 正社員" />
+											</dd>
+									</div>
+
+									<div class="form-flex">
+										<dt class="form-title"><div class="recruit-font">入職希望時期 <span style="color: red;">*</span></div></dt>
+											<dd class="form-padding">
+												<input type="text"  class="text-box" name="email"  required  placeholder="例）2025年10月～" />
+											</dd>
+									</div>
+
+									<div class="form-flex">
+										<dt class="form-title"><div class="recruit-font">その他共有事項</div></dt>
+											<dd class="form-padding">
+												<textarea name="free"  class="text-box"></textarea>
+											</dd>
+									</div>
+									
+									<div class="form-flex">
+										<dt class="form-title"><div class="recruit-font">履歴書</div></dt>
+											<dd class="form-padding">
+												<input type="file" name="example" accept="image/jpeg, image/png">
+											</dd>
+										</div>
+										
+										<div class="form-flex">
+											<dt class="form-title"><div class="recruit-font">職務経歴書</div></dt>
+											<dd class="form-padding">
+												<input type="file" name="example" accept="image/jpeg, image/png">
+											</dd>
+										</div>
+										
+										<div class="form-flex">
+											<dt class="form-title"><div class="recruit-font">免許（医療職の方）</div></dt>
+											<dd class="form-padding">
+												<input type="file" name="example" accept="image/jpeg, image/png">
+											</dd>
+										</div>
+										
+										
+										<div  class="recruit-font" id="alert-message">「履歴書」「職務経歴書」「免許（医療職の方）」のアップロードをお願いします。 <br>
+											※アップロードが出来ない場合は、ファイル無しで送信してください。</div>
+									</dl>
+
+							<div class="form-submit">
+									<button type="submit" class="form-btn">送信</button>
+							</div>
+            </form>
+					</div>
+				</div>
+				</section>
+				<div id="footer"></div>
+    </body>
+</html>
