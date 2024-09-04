@@ -3,7 +3,6 @@
 * {
   margin: 0px;
   color: #474645;
-  font-family: "Noto Sans JP", sans-serif;
   font-optical-sizing: auto;
 }
 
@@ -135,7 +134,7 @@ h4 {
 
 .btn {
   text-align: center;
-	padding: 20px;
+  padding: 20px;
 }
 
 .arrow {
@@ -173,7 +172,7 @@ header {
 }
 
 .header-top {
-	padding-top: 80px;
+  padding-top: 80px;
 }
 
 .hospital-logo {
@@ -347,55 +346,55 @@ img {
 }
 
 @media screen and (min-width: 700px) and (max-width: 1024px) {
-	.container {
+  .container {
     max-width: 680px;
   }
-	
-	.h3-font {
-		font-size: 85%;
-	}
 
-	.p-font {
-		font-size: 75%;
-		padding-top: 5px;
-	}
+  .h3-font {
+    font-size: 85%;
+  }
 
-	.h5-font {
-		font-size: 60%;
-	}
+  .p-font {
+    font-size: 75%;
+    padding-top: 5px;
+  }
 
-	.a-font {
-		font-size: 110%;
-	}
+  .h5-font {
+    font-size: 60%;
+  }
 
-	h1 {
-		font-size: 110%;
-	}
-	h2 {
-		font-size: 100%;
-	}
-	h3 {
-		font-size: 85%;
-		font-weight: normal;
-	}
-	h4 {
-		font-size: 80%;
-		font-weight: bold;
-		border-bottom: 1px dotted #ffffff;
-		padding-top: 30px;
-	}
-	p {
-		font-size: 75%;
-		padding-top: 5px;
-	}
+  .a-font {
+    font-size: 110%;
+  }
 
-	.regular-font {
-		font-size: 110%;
-	}
+  h1 {
+    font-size: 110%;
+  }
+  h2 {
+    font-size: 100%;
+  }
+  h3 {
+    font-size: 85%;
+    font-weight: normal;
+  }
+  h4 {
+    font-size: 80%;
+    font-weight: bold;
+    border-bottom: 1px dotted #ffffff;
+    padding-top: 30px;
+  }
+  p {
+    font-size: 75%;
+    padding-top: 5px;
+  }
 
-	.bread-title {
-		font-size: 65%;
-	}
+  .regular-font {
+    font-size: 110%;
+  }
+
+  .bread-title {
+    font-size: 65%;
+  }
 }
 
 @media screen and (min-width: 1025px) {
@@ -403,9 +402,9 @@ img {
     height: 90px;
   }
 
-	.header-top {
-		padding-top: 90px;
-	}
+  .header-top {
+    padding-top: 90px;
+  }
 
   .small-font {
     font-size: 65%;
@@ -421,9 +420,9 @@ img {
     padding-top: 10px;
   }
 
-	.date .p-font{
-		padding-left: 30px;
-	}
+  .date .p-font {
+    padding-left: 30px;
+  }
 
   .h5-font {
     font-size: 80%;
@@ -459,13 +458,13 @@ img {
     font-size: 100%;
     font-weight: normal;
   }
-	
-	a {
+
+  a {
     font-size: 100%;
     font-weight: normal;
   }
-	
-	.breadcrumb {
+
+  .breadcrumb {
     padding: 30px 0;
   }
 
@@ -533,6 +532,7 @@ img {
   .nav-item a {
     border-bottom: none;
     text-decoration: none;
+    padding: 10px 15px;
   }
 
   .nav-item a:hover {
@@ -581,15 +581,14 @@ img {
   hr {
     height: 1px;
   }
-	
-.arrow {
-  padding: 6px 10px;
-}
 
-.arrow:hover {
-  padding: 6px 10px;
-}
+  .arrow {
+    padding: 6px 10px;
+  }
 
+  .arrow:hover {
+    padding: 6px 10px;
+  }
 
   .copyright {
     text-align: center;
@@ -624,11 +623,11 @@ img {
     width: auto;
   }
 
-	.black-bg {
-		display: none;
-	}
+  .black-bg {
+    display: none;
+  }
 
-	.hide-mobile{
-		display: none;
-	}
+  .hide-mobile {
+    display: none;
+  }
 }
