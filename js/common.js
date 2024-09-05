@@ -196,7 +196,6 @@ async function RecruitTitle(recruitData) {
 
   recruitData.items.forEach((post) => {
     if (post.Recruitment.Title) {
-
       const content = `
 				<section class="recruit-title">
 					<div class="recruit-bar">
@@ -281,13 +280,16 @@ async function displayRecruit(recruitData) {
 async function catchId() {
   const paramsData = await catchEndUrl();
   const hash = paramsData.get("id");
+  console.log(hash);
   scroll(hash);
 }
 
 async function scroll(hash) {
   let targetElement = document.getElementById("id" + hash);
   if (targetElement) {
+    console.log(targetElement.getBoundingClientRect());
     let locationOffset = targetElement.getBoundingClientRect().top - 100;
+    console.log(locationOffset);
     scrollTo(0, locationOffset);
-  } 
+  }
 }

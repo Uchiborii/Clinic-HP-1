@@ -6,6 +6,10 @@
   font-optical-sizing: auto;
 }
 
+pre {
+	font-family: sans-serif;
+}
+
 footer {
   background-color: #014187;
   color: white;
