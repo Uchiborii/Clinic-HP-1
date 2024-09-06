@@ -287,9 +287,10 @@ async function catchId() {
 async function scroll(hash) {
   let targetElement = document.getElementById("id" + hash);
   if (targetElement) {
-    console.log(targetElement.getBoundingClientRect());
-    let locationOffset = targetElement.getBoundingClientRect().top - 100;
-    console.log(locationOffset);
-    scrollTo(0, locationOffset);
+    setTimeout(function () {
+      scrollTo(0, 0);
+      let locationOffset = targetElement.getBoundingClientRect().top - 100;
+      scrollTo(0, locationOffset);
+    }, 100);
   }
 }
