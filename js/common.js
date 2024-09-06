@@ -148,12 +148,11 @@ async function getChooseArticle() {
 }
 
 async function displayPost(data) {
-  getTitle(data);
   const date = new Date(data.dateTime);
   const formattedDate = customFormat(date);
 
   let recruitContents = "";
-  if (data.category == "Recruitment") {
+  if (data.Recruitment.Title) {
     recruitContents = `<a href="recruitment.html?id=${data._id}">採用情報詳細はこちら <i class="bi bi-box-arrow-up-right"></i></a>`;
   }
 
@@ -175,12 +174,7 @@ async function displayPost(data) {
   document.getElementById("result").innerHTML = html;
 }
 
-async function getTitle(data) {
-  let html = "";
-  const contents = `<div class="a-font">${data.title}</div>`;
-  html += contents;
-  document.getElementById("title").innerHTML = html;
-}
+
 
 //採用情報
 
