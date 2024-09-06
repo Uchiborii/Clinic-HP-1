@@ -142,20 +142,22 @@ h4 {
 }
 
 .arrow {
-  width: 30px;
-  height: auto;
-  padding: 6px 9px;
-  margin-left: 6px;
-  background-color: #0359b7;
+	display: inline-block;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
   border-radius: 50%;
-  color: #fff;
-  text-align: center;
+  background: #0359b7;
+	color: #fff;
+  text-align:center;
 }
 
 .arrow:hover {
-  width: 30px;
-  height: 30px;
-  padding: 6px 9px;
+	display: inline-block;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  border-radius: 50%;
   background-color: #033f80;
   border-radius: 50%;
   color: #fff;
@@ -587,11 +589,15 @@ img {
   }
 
   .arrow {
-    padding: 6px 10px;
+		width: 45px;
+		height: 45px;
+		line-height: 45px;
   }
 
   .arrow:hover {
-    padding: 6px 10px;
+		width: 45px;
+		height: 45px;
+		line-height: 45px;
   }
 
   .copyright {
