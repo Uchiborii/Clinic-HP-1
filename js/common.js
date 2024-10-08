@@ -2,28 +2,29 @@ const baseUrl = `https://u-company.cdn.newt.so/v1/blog-547919/post`;
 const recruitUrl = `https://u-company.cdn.newt.so/v1/blog-547919/recruit`;
 const order = "&order=-dateTime";
 
-async function displayData() {
-  const { html, data } = await getPostData(5);
-  document.getElementById("result").innerHTML += html;
+// async function displayData() {
+//   const { html, data } = await getPostData(5);
+//   document.getElementById("result").innerHTML += html;
 
-  const max_page = data.total && data.limit ? Math.ceil(Number(data.total) / Number(data.limit)) : 1;
-
-  const content = `<div class="news-top">
-	<nav aria-label="Page navigation example">
-	<ul class="pagination">
-	<li class="page-item">
-	${page > 1 ? `<li class="page-item"><a class="page-link" href="news.html?page=${page - 1}" aria-label="Previous"><span aria-hidden="true">&laquo; 前へ　</span></a></li>` : ""}
-	</a>
-	</li>
+//   const max_page = data.total && data.limit ? Math.ceil(Number(data.total) / Number(data.limit)) : 1;
 	
-	<li class="page-item">
-	${page < max_page ? `<li class="page-item"><a class="page-link" href="news.html?page=${page + 1}" aria-label="Next"><span aria-hidden="true">　次へ &raquo;</span></a></li>` : ""}
-	</a>
-	</li>
-	</ul>
-	</nav>`;
-  document.getElementById("result").innerHTML += content;
-}
+
+//   const content = `<div class="news-top">
+// 	<nav aria-label="Page navigation example">
+// 	<ul class="pagination">
+// 	<li class="page-item">
+// 	${page > 1 ? `<li class="page-item"><a class="page-link" href="news.html?page=${page - 1}" aria-label="Previous"><span aria-hidden="true">&laquo; 前へ　</span></a></li>` : ""}
+// 	</a>
+// 	</li>
+	
+// 	<li class="page-item">
+// 	${page < max_page ? `<li class="page-item"><a class="page-link" href="news.html?page=${page + 1}" aria-label="Next"><span aria-hidden="true">　次へ &raquo;</span></a></li>` : ""}
+// 	</a>
+// 	</li>
+// 	</ul>
+// 	</nav>`;
+//   document.getElementById("result").innerHTML += content;
+// }
 
 function customFormat(date) {
   const year = date.getFullYear();
@@ -35,6 +36,46 @@ function customFormat(date) {
 
   return `${year}/${month}/${day}${dayOfWeek}`;
 }
+
+
+async function displayData() {
+	const { html, data } = await getPostData(5);
+	document.getElementById("result").innerHTML += html;
+
+	const max_page = data.total && data.limit ? Math.ceil(Number(data.total) / Number(data.limit)) : 1;
+
+	let pageLinks = '';
+	
+for (let i = 1; i <= max_page; i++) {
+  if (i === page) {
+    // 現在のページの場合はリンクを無効に
+    pageLinks += `<li class="page-link active"><span class="page-link">${i}</span></li>`;
+  } else {
+    // page-itemにaタグを追加
+    pageLinks += `<li class="page-link"><a href="news.html?page=${i}" class="page-link">${i}</a></li>`;
+  }
+}
+
+const content = `
+  <div class="news-top">
+    <nav aria-label="Page navigation example">
+      <ul class="pagination">
+        <li class="page-item">
+          ${page > 1 ? `<a class="page-link" href="news.html?page=${page - 1}" aria-label="Previous"><span aria-hidden="true">&laquo; 前へ</span></a>` : ""}
+        </li>
+        ${pageLinks} <!-- ページリンクを追加 -->
+        <li class="page-item">
+          ${page < max_page ? `<a class="page-link" href="news.html?page=${page + 1}" aria-label="Next"><span aria-hidden="true">次へ &raquo;</span></a>` : ""}
+        </li>
+      </ul>
+    </nav>
+  </div>`;
+
+document.getElementById("result").innerHTML += content;
+
+}
+
+
 
 async function fetchData(url) {
   try {
@@ -173,8 +214,6 @@ async function displayPost(data) {
   html += content;
   document.getElementById("result").innerHTML = html;
 }
-
-
 
 //採用情報
 
