@@ -14,10 +14,10 @@ li.page-link{
 	margin: 20px 0;
 }
 
-li.page-link.active{
+li.page-link.active {
 	border: solid 2.5px #023064;
 	padding: 5px 7px;
-	margin-top: 15px;
+	margin-top: 13px;
 }
 
 
@@ -77,10 +77,10 @@ li.page-link.active{
 		margin: 20px 0;
 	}
 
-	li.page-link.active{
+	li.page-link.active {
 		border: solid 2.5px #023064;
 		padding: 10px 10px;
-		margin-top: 10px;
+		margin-top: 8px;
 	}
 }
 
@@ -101,7 +101,7 @@ li.page-link.active{
 	li.page-link.active{
 		border: solid 2.5px #023064;
 		padding: 20px;
-		margin: 30px 0;
+		margin: 27px 0;
 	}
 
   .list-item {

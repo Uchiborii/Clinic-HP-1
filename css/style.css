@@ -108,6 +108,10 @@ a {
   font-size: 65%;
 }
 
+span{
+	font-size: 70%;
+}
+
 a:hover {
   color: #c5c5c5;
 }
@@ -410,6 +414,10 @@ img {
   .bread-title {
     font-size: 65%;
   }
+
+	span {
+		font-size: 90%;
+	}
 }
 
 @media screen and (min-width: 1025px) {
@@ -478,6 +486,10 @@ img {
     font-size: 100%;
     font-weight: normal;
   }
+
+	span{
+		font-size: 100%;
+	}
 
   .breadcrumb {
     padding: 30px 0;
