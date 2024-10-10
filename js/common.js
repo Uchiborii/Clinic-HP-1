@@ -55,7 +55,7 @@ const elm = document.getElementById('pagination');
 				return `<li class="current-page">${num}</li>`;
 			}
 			if (num) {
-				return `<li><a href="?page=${num}">${num}</a></li>`;
+				return `<a href="?page=${num}"><li>${num}</li></a>`;
 			}
 			// numが0のとき
 			return '<li>...</li>';
