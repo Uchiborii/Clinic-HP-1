@@ -83,11 +83,15 @@ li.page-link.active {
 	margin-top: 0;
 }
 
-
 #pagination li:first-child {
 	border-left: 1px solid #CCC;
 	border-radius: 5px 0 0 5px;
 }
+
+#pagination li:last-child {
+	border-radius: 0 5px 5px 0;
+}
+
 
 #pagination a {
 	color: 474645;
