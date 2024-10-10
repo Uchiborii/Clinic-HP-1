@@ -59,10 +59,22 @@ h3 {
   padding-bottom: 5px;
 }
 
+.back{
+	display: flex;
+	justify-content: center;
+	font-size: 50%;
+	padding-bottom: 20px;
+}
+
 @media screen and (min-width: 700px) and (max-width: 1024px) {
   .container {
     max-width: 680px;
   }
+
+	.back{
+		font-size: 60%;
+		padding-bottom: 20px;
+	}
 }
 
 @media screen and (min-width: 1025px) {
@@ -100,4 +112,9 @@ h3 {
   .first-title h2 {
     padding-top: 90px;
   }
+
+	.back{
+		font-size: 80%;
+		padding-bottom: 20px;
+	}
 }
